@@ -42,6 +42,7 @@ database.ref().on("child_added", function(snapshot){
         d.append(snapshot.val().frequency);
 
     var e = $("<th>");
+    var nextTrain = snapshot.moment().add(minutesAway, "minutes");
         e.append(snapshot.val().next);
 
     var f = $("<th>");
